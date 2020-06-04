@@ -7,11 +7,11 @@ $aData = json_decode($sJson, true);
 
 foreach ( $aData as $aRow ) {
     array_push($aEvenement, [
-        $aRow['id'],
-        $aRow['title']['rendered'],
-        $aRow['content']['rendered'],
-        $aRow['date-evenement'],
-        $aRow['reservations-evenement']
+        "id" => $aRow['id'],
+        "titre" => $aRow['title']['rendered'],
+        "texte" => $aRow['content']['rendered'],
+        "date-evenement" => $aRow['date-evenement'],
+        "reservations-evenement" => $aRow['reservations-evenement']
     ]);
 }
 
